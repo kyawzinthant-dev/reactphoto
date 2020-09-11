@@ -1,0 +1,17 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding:30px
+}
+h1{
+    text-align: center;
+    color:rgb(12, 77, 255);
+    font-size: 4em;
+    font-family: 'Lobster', cursive !important;
+}
+h5{
+    text-align: center;
+    color:orange;
+    margin-top:20px;
+}
+
