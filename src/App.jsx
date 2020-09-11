@@ -26,7 +26,7 @@ function App() {
     })
 
     useEffect(()=>{
-        document.body.style.backgroundColor = darkmode ? "black":"whitesmoke";
+        document.body.style.backgroundColor = darkmode ? "black":"lightyellow";
     },[darkmode])
 
     return (
