@@ -31,7 +31,7 @@ function App() {
 
     return (
         <div className="container">
-         <h1>Photo Uploader</h1>
+         <h1>My Photo Uploader</h1>
         <h5 onClick={toggleDark}>Press Space or click here to Change {darkmode? 'light': 'dark'} Mode </h5>
          <UploadForms/>   
          <ImageGrid setSelectedImg={setSelectedImg}/>

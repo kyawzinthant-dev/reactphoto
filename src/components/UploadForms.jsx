@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ProgressBar from './ProgressBar';
 import { FaUpload } from 'react-icons/fa';
 
@@ -7,6 +7,7 @@ function UploadForms() {
 
     const [file,setFile] = useState(null);
     const [error, setError] = useState(null);
+    const fileRef = useRef(null);
 
     const types = ['image/png', 'image/jpeg'];
 
@@ -14,8 +15,15 @@ function UploadForms() {
         let selected = e.target.files[0];
         
         if(selected && types.includes(selected.type)){
+            var password = prompt('Enter the password!');
+            if(password==="kaskar123!"){
             setFile(selected);
             setError(' ')
+            }
+            else{
+                setError('Wrong Password')
+                fileRef.current.value = null;
+            }
 
         }
         else{
@@ -27,7 +35,7 @@ function UploadForms() {
     return (
         <form>
             <label>
-            <input type="file" onChange={changeHandler}/>
+            <input ref={fileRef} type="file" onChange={changeHandler}/>
             <span><FaUpload/></span>
             </label>
             <div className="output">
